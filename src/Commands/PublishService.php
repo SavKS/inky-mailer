@@ -41,7 +41,7 @@ class PublishService extends Command
             [
                 \config('inky-mailer.service.name'),
                 $defaultConnection === 'tcp' ?
-                    "--port={$connection['host']}{$connection['port']}" :
+                    "--host={$connection['host']} --port={$connection['port']}" :
                     "--path={$connection['path']}",
                 \config('inky-mailer.server_path'),
             ],

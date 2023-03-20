@@ -61,15 +61,16 @@ app.post('/render', asyncHandler(async (req, res) => {
 }));
 
 const port = argv.port;
+const host = argv.host;
 const unixSocket = argv.path;
 
-if (!port && !unixSocket) {
-    throw new Error('Port or unix-socket path must be specified');
+if (!host && !port && !unixSocket) {
+    throw new Error('Unix-socket path or port with host must be specified');
 }
 
 if (port) {
-    app.listen(port, () => {
-        log(`Listening on port: ${ port }`)
+    app.listen(port, host, () => {
+        log(`Listening on: http://${ host }:${ port }`)
     });
 } else {
     if (!unixSocket.startsWith('/')) {

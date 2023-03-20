@@ -26,9 +26,9 @@ class ServerStart extends Command
         $process = new Process([
             'yarn',
             'start',
-            $defaultConnection === 'tcp' ?
-                "--port={$connection['host']}{$connection['port']}" :
-                "--path={$connection['path']}",
+            ...($defaultConnection === 'tcp' ?
+                ["--host={$connection['host']}", "--port={$connection['port']}"] :
+                ["--path={$connection['path']}"]),
         ], $serverPath);
 
         $process->setTty(true);
