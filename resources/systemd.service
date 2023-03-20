@@ -1,0 +1,10 @@
+[Unit]
+Description=%NAME%
+
+[Service]
+ExecStart=yarn start %LISTEN%
+WorkingDirectory=%CWD%
+Restart=always
+
+[Install]
+WantedBy=default.target

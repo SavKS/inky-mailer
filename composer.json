@@ -1,0 +1,20 @@
+{
+    "name": "savks/inky-mailer",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Savks\\InkyMailer\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Savks\\InkyMailer\\Providers\\InkyMailerServiceProvider"
+            ]
+        }
+    }
+}

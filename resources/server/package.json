@@ -1,0 +1,17 @@
+{
+    "name": "inky-renderer",
+    "packageManager": "yarn@3.2.3",
+    "scripts": {
+        "start": "node index.mjs"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.12",
+        "express": "^4.18.2",
+        "express-async-handler": "^1.2.0",
+        "fancy-log": "^2.0.0",
+        "html-minifier-terser": "^7.1.0",
+        "inky": "^1.4.2",
+        "inline-css": "^4.0.2",
+        "minimist": "^1.2.8"
+    }
+}
