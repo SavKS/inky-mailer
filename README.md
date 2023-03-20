@@ -17,11 +17,11 @@ composer require savks/inky-mailer
           _Замовчування — **inky-render-server**._
 
     - Для типу з'єднання **TCP**:
-        - **INKY_MAILER_TCP_HOST** — адреса реднер-серверу.
-        - **INKY_MAILER_TCP_PORT** — порт реднер-серверу.
+        - **INKY_MAILER_TCP_HOST** — адреса рендер-серверу.
+        - **INKY_MAILER_TCP_PORT** — порт рендер-серверу.
 
     - Для типу з'єднання **UNIX**:
-        - **INKY_MAILER_UNIX_PATH** — шлях до unix-сокету реднер-сервера.
+        - **INKY_MAILER_UNIX_PATH** — шлях до unix-сокету рендер-сервера.
 
     - Налаштування рендеру:
         - **INKY_MAILER_RENDER_OPTS_INLINE_CSS** — вмикає вбудовування стилів в HTML-код
